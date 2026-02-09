@@ -1,59 +1,51 @@
-# CS210 Titanic Data Analysis
+# Titanic Dataset Exploratory Data Analysis
 
-Python project analyzing the Titanic dataset to explore survival patterns and visualize relationships between passenger features. This project demonstrates data analysis, statistical computation, and visualization skills.
+A Python-based statistical analysis project exploring survival patterns on the Titanic. This tool processes raw passenger data to identify correlations between demographics (age, class, gender) and survival rates using custom visualization scripts.
 
----
+## Key Findings & Visualizations
+Analysis reveals a significant disparity in survival rates across different demographics. 
+
+![Survival by Sex Analysis](survival_by_Sex.png)
+*Figure 1: Survival rates broken down by gender, highlighting the higher survival probability for female passengers.*
 
 ## Project Overview
+* **Objective:** Identify and visualize trends in survival probability based on passenger attributes.
+* **Dataset:** `titanic_clean.csv` (Features: Age, Class, Fare, Family Size, Survival Status).
+* **Methodology:**
+    * **Data Ingestion:** Custom parsing of CSV data into structured Python dictionaries.
+    * **Statistical Analysis:** Computation of mean, standard deviation, mode, and Pearson correlation coefficients.
+    * **Visualization:** Generation of scatterplots and bar charts to map variable relationships.
 
-- **Objective:** Analyze the Titanic dataset to identify trends in survival and visualize relationships between variables.
-- **Dataset:** Cleaned Titanic dataset (`titanic_clean.csv`) containing passenger information, including age, class, fare, family size, and survival status.
-- **Key Features:**
-  - Load CSV data into a structured dictionary.
-  - Summarize numerical and categorical data (min, max, mean, stdev, mode, unique values).
-  - Compute Pearson correlation coefficients between variables.
-  - Visualize survival patterns using scatterplots.
-  - Extra credit: Bar charts showing survival counts and percentages by category (e.g., gender).
+## Files Structure
+* `titanic.py` – Core analysis engine. Handles data loading, statistical summaries, and correlation algorithms.
+* `survivors.py` – Extended visualization module. Generates categorical bar charts (e.g., survival by gender/class).
+* `analysis_script.py` – Execution script for running specific analysis routines.
+* `titanic_clean.csv` – Processed dataset used for analysis.
 
----
+## Installation & Usage
 
-## Files
+1.  **Clone the repository**
+    ```bash
+    git clone [https://github.com/05ashton/Titanic-Dataset-Analysis.git](https://github.com/05ashton/Titanic-Dataset-Analysis.git)
+    cd Titanic-Dataset-Analysis
+    ```
 
-- `titanic.py` – Main module containing functions for:
-  - Loading data (`load_data`)
-  - Summarizing data (`summarize`)
-  - Computing correlations (`pearson_corr`)
-  - Visualizing survival patterns (`survivor_vis`)
-- `survivors.py` – Extra credit module:
-  - Bar charts showing survival counts and percentages by category.
-- `README.md` – Project documentation.
-- `survival_by_<category>.png` – Example output plot.
+2.  **Install dependencies**
+    ```bash
+    pip install -r requirements.txt
+    ```
 
----
-
-## Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/YourUsername/CS210-Titanic-Analysis.git
-cd CS210-Titanic-Analysis
-
-2.	Install dependencies:
-pip install matplotlib
+3.  **Run the analysis**
+    ```bash
+    python titanic.py
+    ```
 
 ## Skills Demonstrated
-	•	Python dictionaries and list manipulation
-	•	CSV file handling
-	•	Statistical summaries and correlation analysis
-	•	Data visualization using matplotlib
-	•	Writing structured, reusable Python code
-	•	Analyzing real-world datasets
+* **Data Analysis:** Statistical profiling (min/max, mean, stdev) and correlation analysis (Pearson coefficient).
+* **Python Development:** Efficient dictionary manipulation and modular code structure.
+* **Data Visualization:** Programmatic generation of insights using Matplotlib.
 
-Author
-
+---
+**Author**
 Ashton Curl
-Undergraduate, Computer Science
-University of Oregon
-https://www.linkedin.com/in/ashton-curl-a7b804371/
-https://github.com/05ashton
+[LinkedIn](https://www.linkedin.com/in/ashton-curl-a7b804371/) | [GitHub](https://github.com/05ashton)
